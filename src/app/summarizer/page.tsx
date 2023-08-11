@@ -20,7 +20,6 @@ export default function Summarizer() {
           message: text,
         }
       );
-      //   console.log(request);
       if (request.status !== 200) {
         toast.error("Unable to generate response at the moment");
       }
@@ -29,7 +28,6 @@ export default function Summarizer() {
         setResult(request.data.response);
       }
     } catch (error: any) {
-      //   console.log(error);
       toast.error(error?.message ?? "An error occured. Please, try again");
     } finally {
       setLoading(false);
